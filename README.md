@@ -112,6 +112,43 @@ Within this subtree, the Queries item tells me that the name of the website that
 *Ref 11: Queries and Answers within the DNS subtree*
 
 ### Step Five
+
+Description: Use filters to explore TCP packets
+
+In this final step, I’m interested in further examining TCP packets, as well as locating specific packets based on text that is present in payload data contained inside network packets. 
+
+First, I want to filter by TCP port number. Similarly to what I did in step four, I entered the following filter to select TCP port 80 traffic.
+
+![image](https://github.com/aehumphrey/Analyzing-Packets-Wireshark/assets/33531835/2850f600-05dd-43cd-867f-b1fb8f45e5f9)
+
+![image](https://github.com/aehumphrey/Analyzing-Packets-Wireshark/assets/33531835/244ad98f-4178-4c68-8198-afeebbb96a9f)
+
+*Ref 12: Filtering packets by TCP port number*
+
+TCP port 80 is the default port associated with web traffic, so, unsurprisingly, quite a few packets were created when the user accessed this website!
+
+I’m interested in the first packet from this list, with Destination IP 169.254.169.254. This is packet 37. Opening the Internet Protocol Version 4 subtree, I can see that the Time to Live value was 64. Time to Live (TTL) is a mechanism which limits the lifespan of a packet, preventing it from circulating indefinitely. 64 is the recommended TTL value for the Internet Protocol.
+
+![image](https://github.com/aehumphrey/Analyzing-Packets-Wireshark/assets/33531835/5c56bd32-b7c8-4d7e-b890-4a4627221b24)
+
+*Ref 13: Time to Live (TTL) for packet 37*
+
+Within this same subtree, I can also see that the Header Length is 20 bytes.
+
+![image](https://github.com/aehumphrey/Analyzing-Packets-Wireshark/assets/33531835/46280da6-3d74-4931-8b1c-0974daa0a129)
+
+*Ref 14: Header Length of packet 37*
+
+Next, I wanted to know the Frame Length of this packet. “Frame” refers to a unit of data in the Link Layer (Layer 2 on the OSI model). “Frame Length” is a measurement of data. The Frame Length of this packet is 54 bytes (432 bits : 1 byte = 8 bits).
+
+![image](https://github.com/aehumphrey/Analyzing-Packets-Wireshark/assets/33531835/180ac44c-bbd3-4489-b946-62b12116efc1)
+
+*Ref 15: Frame Length of packet 37*
+
+
+
+
+
 [Coming soon]
 
 
