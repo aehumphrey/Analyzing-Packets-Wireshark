@@ -145,7 +145,13 @@ Next, I wanted to know the Frame Length of this packet. “Frame” refers to a 
 
 *Ref 15: Frame Length of packet 37*
 
+Finally, I wanted to filter packets containing web requests made with the curl command. To do this, I entered the following to search for TCP packet data that contained specific text data:
 
+![image](https://github.com/aehumphrey/Analyzing-Packets-Wireshark/assets/33531835/b923b61b-bffe-49dc-957b-f8420877c004)
+
+![image](https://github.com/aehumphrey/Analyzing-Packets-Wireshark/assets/33531835/d5bc0fd2-c483-4bb3-84b6-e685449ce4df)
+
+*Ref 16: Filtering for packets containing specific text*
 
 
 
