@@ -154,9 +154,6 @@ Finally, I wanted to filter packets containing web requests made with the curl c
 *Ref 16: Filtering for packets containing specific text*
 
 
-
-[Coming soon]
-
-
 ## Summary
-[Coming soon]
+
+This project gave me practical experience using Wireshark to open saved packet capture files, view high-level packet data, and use filters to inspect detailed packet data.
