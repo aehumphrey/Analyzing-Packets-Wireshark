@@ -86,15 +86,34 @@ I’m interested in traffic associated with this MAC address. Specifically, I wa
 *Ref 8. Identifying Protocols in Wireshark*
 
 ### Step Four
-[Coming soon]
+
+Description: Use filters to explore DNS packets
+
+Next, I’m going to take a look at a specific port number. DNS queries and responses use UDP port 53, which means that vulnerabilities in this port can be exploited by malicious actors (i.e., through DDoS attacks).
+
+To select UDP port 53 traffic, I filtered for the following: 
+
+![image](https://github.com/aehumphrey/Analyzing-Packets-Wireshark/assets/33531835/caf47812-8c45-4bc9-99f4-d0c38f5a1cef)
+
+I’m interested in the fourth packet in this list (packet 12). Selecting this packet, I can then navigate to the Domain Name System (query) subtree. 
+
+![image](https://github.com/aehumphrey/Analyzing-Packets-Wireshark/assets/33531835/bb490b8e-c5ab-4faf-ae4c-1ee24baabed6)
+
+*Ref 9: Filtering packets by UDP port number*
+
+![image](https://github.com/aehumphrey/Analyzing-Packets-Wireshark/assets/33531835/0b06607e-1500-4d0f-b297-99a05d8cad91)
+
+*Ref 10: Navigating to the DNS Subtree in packet 12*
+
+Within this subtree, the Queries item tells me that the name of the website that was queried is opensource.google.com. That means that this packet was sent by someone trying to access opensource.google.com.  The Answers data includes the name that was queried (opensource.google.com) and the addresses that are associated with that name. The IP address I filtered for in steps two and three (142.250.1.139) appears in the expanded Answers section.
+
+![image](https://github.com/aehumphrey/Analyzing-Packets-Wireshark/assets/33531835/0075bfe3-691f-43a7-9a60-d5debd985acb)
+
+*Ref 11: Queries and Answers within the DNS subtree*
 
 ### Step Five
 [Coming soon]
 
-### Step Six
-
-[Coming soon]
-
-[Coming soon]
 
 ## Summary
+[Coming soon]
